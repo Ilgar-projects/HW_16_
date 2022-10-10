@@ -68,6 +68,8 @@ class Offer(db.Model):
         return {
             "id": self.id,
             "order_id": self.order_id,
-            "customer_id": self.customer_id,
+            "executor_id": self.executor_id,
+            "order": self.order.return_data(),
+            "executor": self.executor.return_data()
 
         }
